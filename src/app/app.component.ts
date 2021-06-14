@@ -275,7 +275,6 @@ export class AppComponent implements AfterViewInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-    // console.log('this.datasource',this.dataSource);
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
@@ -297,10 +296,9 @@ export class AppComponent implements AfterViewInit {
     const newDataSource: any = [];
     let inputFalse = false;
     datasourceList.forEach((element: any) => {
-      newDataSource.push(Object.values(element).join(" "));
+      newDataSource.push(Object.values(element).join(' '));
     });
     if(newDataSource.every((e: any) => e.includes(input))) {
-      console.log('test is correct');
       inputFalse = true;
     }
     return inputFalse;
