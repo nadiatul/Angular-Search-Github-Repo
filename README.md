@@ -1,6 +1,6 @@
 About
 
-This project is about filtering the Github API keywords
+This project is about Search/Filter Github API keywords
 
 # Angular Search Github Api
 
